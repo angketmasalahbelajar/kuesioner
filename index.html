@@ -1,0 +1,151 @@
+<html>
+<head>
+    <title>Pertanyaan Kuesioner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            /* max-width: 400px; */
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .question-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        .question-card h5 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .btn-group {
+            /* width: 100%; */
+            display: flex;
+            /* justify-content: space-between; */
+        }
+        .btn-group .form-check {
+            width: 48%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn-group .form-check input {
+            display: none;
+        }
+        .btn-group .form-check label {
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn-group .form-check input:checked + label {
+            background-color: #ff5722;
+            color: white;
+        }
+        .btn-group .form-check input:not(:checked) + label {
+            background-color: #f1f1f1;
+            color: #bdbdbd;
+        }
+        @media (min-width: 768px) {
+            .container {
+                /* max-width: 600px; */
+            }
+            .question-card h5 {
+                font-size: 18px;
+            }
+            .btn-group .form-check label {
+                font-size: 16px;
+                padding: 12px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h4 class="text-center mb-4">PERTANYAAN KUESIONER</h4>
+        
+        <div class="question-card">
+            <h5>1/5 pertanyaan</h5>
+            <p>Apakah kamu merasa kesepian ketika sendiri?</p>
+            <div class="btn-group">
+                <div class="form-check">
+                    <input type="radio" id="q1-no" name="q1" value="tidak">
+                    <label for="q1-no">tidak</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="q1-yes" name="q1" value="ya">
+                    <label for="q1-yes">ya</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="question-card">
+            <h5>2/5 pertanyaan</h5>
+            <p>Apakah kamu merasa kesulitan saat belajar?</p>
+            <div class="btn-group">
+                <div class="form-check">
+                    <input type="radio" id="q2-no" name="q2" value="tidak">
+                    <label for="q2-no">tidak</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="q2-yes" name="q2" value="ya">
+                    <label for="q2-yes">ya</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="question-card">
+            <h5>3/5 pertanyaan</h5>
+            <p>Apakah kamu merasa cemas ketika berbicara di depan umum?</p>
+            <div class="btn-group">
+                <div class="form-check">
+                    <input type="radio" id="q3-no" name="q3" value="tidak">
+                    <label for="q3-no">tidak</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="q3-yes" name="q3" value="ya">
+                    <label for="q3-yes">ya</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="question-card">
+            <h5>4/5 pertanyaan</h5>
+            <p>Apakah kamu merasa sedih ketika tak punya teman?</p>
+            <div class="btn-group">
+                <div class="form-check">
+                    <input type="radio" id="q4-no" name="q4" value="tidak">
+                    <label for="q4-no">tidak</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="q4-yes" name="q4" value="ya">
+                    <label for="q4-yes">ya</label>
+                </div>
+            </div>
+        </div>
+        <div class="question-card">
+            <h5>5/5 pertanyaan</h5>
+            <p>Apakah kamu merasa sedih ketika tak punya teman?</p>
+            <div class="btn-group">
+                <div class="form-check">
+                    <input type="radio" id="q5-no" name="q4" value="tidak">
+                    <label for="q5-no">tidak</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" id="q4-yes" name="q4" value="ya">
+                    <label for="q4-yes">ya</label>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
