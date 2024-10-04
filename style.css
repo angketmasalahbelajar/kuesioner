@@ -46,6 +46,13 @@ body {
     background-color: #f1f1f1;
     color: #bdbdbd;
 }
+
+button.btn.btn-next {
+    background-color: #ff5722;
+    color: #fff;
+    
+}
+
 @media (min-width: 768px) {
     
     .question-card h5 {

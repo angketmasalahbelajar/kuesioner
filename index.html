@@ -5,94 +5,130 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h4 class="text-center mb-4">PERTANYAAN KUESIONER</h4>
+    <div class="container-fluid">
+        <h4 class="text-center mb-4 mt-4 fw-bold">PERTANYAAN KUESIONER</h4>
 
-        <div class="question-card">
-            <div class="mb-3">
-                <label for="name" class="form-label">Nama</label>
-                <input type="text" class="form-control" id="name" placeholder="Masukkan nama">
+        <form action="">
+            <div class="question-card">
+                
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="name" placeholder="Masukkan nama">
+                </div>
+                <div class="mb-3">
+                    <label for="class" class="form-label">Kelas</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>PILIH KELAS KAMU</option>
+                        <option value="X.1">X.1</option>
+                        <option value="X.2">X.2</option>
+                        <option value="X.3">X.3</option>
+                        <option value="X.4">X.4</option>
+                        <option value="X.5">X.5</option>
+                        <option value="X.6">X.6</option>
+                        <option value="X.7">X.7</option>
+                        <option value="X.8">X.8</option>
+                        <option value="XI.1">XI.1</option>
+                        <option value="XI.2">XI.2</option>
+                        <option value="XI.3">XI.3</option>
+                        <option value="XI.4">XI.4</option>
+                        <option value="XI.5">XI.5</option>
+                        <option value="XI.6">XI.6</option>
+                        <option value="XI.7">XI.7</option>
+                        <option value="XI.8">XI.8</option>
+                        <option value="XII.1">XII.1</option>
+                        <option value="XII.2">XII.2</option>
+                        <option value="XII.3">XII.3</option>
+                        <option value="XII.4">XII.4</option>
+                        <option value="XII.5">XII.5</option>
+                        <option value="XII.6">XII.6</option>
+                        <option value="XII.7">XII.7</option>
+                        <option value="XII.8">XII.8</option>
+                        <option value="XII.8">XII.9</option>
+                        <option value="XII.8">XII.10</option>
+                        <option value="XII.8">XII.11</option>
+                        <option value="XII.8">XII.12</option>
+                    </select>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="class" class="form-label">Kelas</label>
-                <input type="text" class="form-control" id="class" placeholder="Masukkan kelas">
+            
+            <div class="question-card">
+                <h5>1/5 pertanyaan</h5>
+                <p>Apakah Anda selalu bersemangat untuk belajar setiap hari?</p>
+                <div class="btn-group">
+                    <div class="form-check">
+                        <input type="radio" id="q1-no" name="q1" value="tidak">
+                        <label for="q1-no">tidak</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="q1-yes" name="q1" value="ya">
+                        <label for="q1-yes">ya</label>
+                    </div>
+                </div>
             </div>
-        </div>
+            
+            <div class="question-card">
+                <h5>2/5 pertanyaan</h5>
+                <p>Apakah Anda sering menunda-nunda mengerjakan tugas sekolah?</p>
+                <div class="btn-group">
+                    <div class="form-check">
+                        <input type="radio" id="q2-no" name="q2" value="tidak">
+                        <label for="q2-no">tidak</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="q2-yes" name="q2" value="ya">
+                        <label for="q2-yes">ya</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question-card">
+                <h5>3/5 pertanyaan</h5>
+                <p>Apakah Anda belajar hanya untuk mendapatkan nilai baik, bukan karena ingin memahami materi?</p>
+                <div class="btn-group">
+                    <div class="form-check">
+                        <input type="radio" id="q3-no" name="q3" value="tidak">
+                        <label for="q3-no">tidak</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="q3-yes" name="q3" value="ya">
+                        <label for="q3-yes">ya</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question-card">
+                <h5>4/5 pertanyaan</h5>
+                <p>4. Apakah Anda sering merasa malas untuk belajar meskipun tahu ada tugas penting?</p>
+                <div class="btn-group">
+                    <div class="form-check">
+                        <input type="radio" id="q4-no" name="q4" value="tidak">
+                        <label for="q4-no">tidak</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="q4-yes" name="q4" value="ya">
+                        <label for="q4-yes">ya</label>
+                    </div>
+                </div>
+            </div>
+            <div class="question-card">
+                <h5>5/5 pertanyaan</h5>
+                <p>Apakah Anda memiliki tujuan yang jelas dalam belajar?</p>
+                <div class="btn-group">
+                    <div class="form-check">
+                        <input type="radio" id="q5-no" name="q5" value="tidak">
+                        <label for="q5-no">tidak</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" id="q5-yes" name="q5" value="ya">
+                        <label for="q5-yes">ya</label>
+                    </div>
+                </div>
+            </div>
+            <div class="" style="text-align: center;">
+                <button class="btn btn-next mt-3 mb-4 mx-auto">Selanjutnya</button>
+            </div>
+        </form>
         
-        <div class="question-card">
-            <h5>1/5 pertanyaan</h5>
-            <p>Apakah kamu merasa kesepian ketika sendiri?</p>
-            <div class="btn-group">
-                <div class="form-check">
-                    <input type="radio" id="q1-no" name="q1" value="tidak">
-                    <label for="q1-no">tidak</label>
-                </div>
-                <div class="form-check">
-                    <input type="radio" id="q1-yes" name="q1" value="ya">
-                    <label for="q1-yes">ya</label>
-                </div>
-            </div>
-        </div>
-        
-        <div class="question-card">
-            <h5>2/5 pertanyaan</h5>
-            <p>Apakah kamu merasa kesulitan saat belajar?</p>
-            <div class="btn-group">
-                <div class="form-check">
-                    <input type="radio" id="q2-no" name="q2" value="tidak">
-                    <label for="q2-no">tidak</label>
-                </div>
-                <div class="form-check">
-                    <input type="radio" id="q2-yes" name="q2" value="ya">
-                    <label for="q2-yes">ya</label>
-                </div>
-            </div>
-        </div>
-        
-        <div class="question-card">
-            <h5>3/5 pertanyaan</h5>
-            <p>Apakah kamu merasa cemas ketika berbicara di depan umum?</p>
-            <div class="btn-group">
-                <div class="form-check">
-                    <input type="radio" id="q3-no" name="q3" value="tidak">
-                    <label for="q3-no">tidak</label>
-                </div>
-                <div class="form-check">
-                    <input type="radio" id="q3-yes" name="q3" value="ya">
-                    <label for="q3-yes">ya</label>
-                </div>
-            </div>
-        </div>
-        
-        <div class="question-card">
-            <h5>4/5 pertanyaan</h5>
-            <p>Apakah kamu merasa sedih ketika tak punya teman?</p>
-            <div class="btn-group">
-                <div class="form-check">
-                    <input type="radio" id="q4-no" name="q4" value="tidak">
-                    <label for="q4-no">tidak</label>
-                </div>
-                <div class="form-check">
-                    <input type="radio" id="q4-yes" name="q4" value="ya">
-                    <label for="q4-yes">ya</label>
-                </div>
-            </div>
-        </div>
-        <div class="question-card">
-            <h5>5/5 pertanyaan</h5>
-            <p>Apakah kamu merasa sedih ketika tak punya teman?</p>
-            <div class="btn-group">
-                <div class="form-check">
-                    <input type="radio" id="q5-no" name="q5" value="tidak">
-                    <label for="q5-no">tidak</label>
-                </div>
-                <div class="form-check">
-                    <input type="radio" id="q5-yes" name="q5" value="ya">
-                    <label for="q5-yes">ya</label>
-                </div>
-            </div>
-        </div>
-        <button class="btn btn-warning">test</button>
     </div>
 </body>
 </html>
