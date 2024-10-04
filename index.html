@@ -8,16 +8,16 @@
     <div class="container-fluid">
         <h4 class="text-center mb-4 mt-4 fw-bold">PERTANYAAN KUESIONER</h4>
 
-        <form action="">
+        <form name="submit-to-google-sheet">
             <div class="question-card">
                 
                 <div class="mb-3">
                     <label for="name" class="form-label">Nama</label>
-                    <input type="text" class="form-control" id="name" placeholder="Masukkan nama">
+                    <input type="text" class="form-control" id="name" placeholder="Masukkan nama" name="nama">
                 </div>
                 <div class="mb-3">
                     <label for="class" class="form-label">Kelas</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select" name="kelas">
                         <option selected>PILIH KELAS KAMU</option>
                         <option value="X.1">X.1</option>
                         <option value="X.2">X.2</option>
@@ -125,10 +125,48 @@
                 </div>
             </div>
             <div class="" style="text-align: center;">
-                <button class="btn btn-next mt-3 mb-4 mx-auto">Selanjutnya</button>
+                <button class="btn btn-next mt-3 mb-4 mx-auto btn-kirim" type="submit">Selanjutnya</button>
+
+                <button class="btn btn-next btn-loading d-none" type="button" disabled>
+                    <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+                    <span role="status">Loading...</span>
+                </button>
             </div>
         </form>
-        
+
     </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwVh04h3Y6-pPRGO1wLsvMVt6e8x7EorehOduzOsOT2t9F8Rzpc5G7LaD6BH0LE3CNk/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const btnKirim = document.querySelector('.btn-kirim');
+    const btnLoading = document.querySelector('.btn-loading');
+    
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        // ketika tombol submit di klik
+        // tampilkan tombol loading hilangkan tombol kirim
+        btnLoading.classList.toggle('d-none')
+        btnKirim.classList.toggle('d-none')
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            btnLoading.classList.toggle('d-none')
+            btnKirim.classList.toggle('d-none')
+            Swal.fire({
+                title: 'Berhasil 😁',
+                text: 'Silahkan dilanjutkan',
+                icon: 'success',
+                confirmButtonText: 'lanjutkan'
+            })
+
+            form.reset()
+
+            console.log('Success!', response)
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
 </body>
 </html>
