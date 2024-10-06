@@ -1,5 +1,5 @@
 body {
-    background-color: #f8f9fa;
+    background-color: #F9C4B7;
     font-family: Arial, sans-serif;
 }
 .container {
@@ -13,6 +13,7 @@ body {
     margin-bottom: 20px;
     padding: 15px;
 }
+
 .question-card h5 {
     font-size: 16px;
     font-weight: bold;
@@ -20,12 +21,33 @@ body {
 .btn-group {
     display: flex;
 }
+
 .btn-group .form-check {
     width: 48%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/* 
+.btn-group .form-check img{
+    width: 50;
+    height: 500;
+    background-color: #f1f1f1;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(49deg) brightness(103%) contrast(103%);
+    color: #fff;
+    fill: white;
+} */
+.btn-group .form-check svg {
+    width: 50px;
+    height: 50px;
+    /* fill: white; */
+    
+}
+/* .btn-group .form-check .cross-icon{
+    background-color: #bdbdbd;
+    -webkit-mask: url(image/icon/cross.svg) no-repeat center;
+    mask: url(image/icon/cross.svg) no-repeat center;
+} */
 .btn-group .form-check input {
     display: none;
 }
@@ -39,7 +61,7 @@ body {
     cursor: pointer;
 }
 .btn-group .form-check input:checked + label {
-    background-color: #ff5722;
+    background-color: #FC5E3C;
     color: white;
 }
 .btn-group .form-check input:not(:checked) + label {
@@ -47,8 +69,9 @@ body {
     color: #bdbdbd;
 }
 
+
 button.btn.btn-next {
-    background-color: #ff5722;
+    background-color: #FC5E3C;
     color: #fff;
     
 }
