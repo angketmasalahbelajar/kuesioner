@@ -1,6 +1,7 @@
 body {
     background-color: #F9C4B7;
     font-family: Arial, sans-serif;
+    /* font-size: 2vw; */
 }
 .container {
     margin: 20px auto;
@@ -9,6 +10,7 @@ body {
 .question-card {
     background-color: white;
     border-radius: 10px;
+    /* height: 30vh; */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     padding: 15px;
@@ -86,3 +88,41 @@ button.btn.btn-next {
         padding: 12px 0;
     }
 }
+
+@media (max-width: 480px) {
+    /* Adjust the container padding and margin */
+    .container {
+      margin: 10px auto;
+      padding: 10px;
+    }
+    
+    /* Make the question card full-width */
+    .question-card {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+    
+    /* Adjust the button group layout */
+    .btn-group {
+      flex-direction: column;
+    }
+    
+    .btn-group .form-check {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    /* Adjust the label font size and padding */
+    .btn-group .form-check label {
+      font-size: 12px;
+      padding: 8px 0;
+    }
+    
+    /* Adjust the next button */
+    button.btn.btn-next {
+      width: 100%;
+      font-size: 14px;
+      padding: 10px 0;
+    }
+  }
