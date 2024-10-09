@@ -23,6 +23,7 @@ form.addEventListener('submit', e => {
         form.reset()
 
         console.log('Success!', response)
+        window.location.replace("berhasil.html");
     })
     .catch(error => console.error('Error!', error.message))
 })

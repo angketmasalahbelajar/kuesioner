@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Pertanyaan Kuesioner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid text-center">
+        <div class="question-card mt-3">
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">SUKSES!</h4>
+                <hr>
+                <p class="mb-0">Jawaban kamu telah tersimpan</p>
+              </div>
+        </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    // Fetch data from the API
+    fetch('https://api.sheetbest.com/sheets/1e36ae07-c2ef-460c-922d-2debe01c8371')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Assuming data is an array and the last entry is the most recent one
+            const lastEntry = data[data.length - 1];
+            
+            // Assuming 'nama' is the key for the name in the data object
+            const name = lastEntry.nama || 'Pengguna'; // Fallback in case 'nama' is not found
+            
+            // Update the alert message
+            const alertMessage = `Terimakasih ${name} telah mengisi kuesioner`;
+            
+            // Select the alert and update the content
+            document.querySelector('.alert-heading').innerText = alertMessage;
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+</script>
+</body>
+</html>
